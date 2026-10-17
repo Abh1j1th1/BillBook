@@ -1,3 +1,4 @@
+
 # BillBook
 
 **Turn photos of GST invoices into clean, searchable, validated data.**
@@ -82,12 +83,15 @@ Open the URL printed in the terminal (usually http://127.0.0.1:7860).
 ## Using the app
 
 ### 1. Scan bills
+
 Choose a reading mode, upload your photos and press **Read and save bills**. In cloud mode you can paste an API key for the session, or leave it blank to use `GEMINI_API_KEY` from `.env`. The key is never written to disk. A results table shows what was saved, what was skipped as a duplicate, and what failed.
 
 ### 2. Browse and search
+
 Filter or search your bills, then click a row to open it. You will see the original photo, the line items and the validation issues. If the model got something wrong, open **Edit extracted data (JSON)**, fix it and press **Save correction**. You can also export the single bill as CSV or delete it.
 
 ### 3. Export
+
 - **Filtered bills to CSV:** exports whatever the Browse tab is currently showing.
 - **Corrections as training data (JSONL):** exports every correction you have made.
 
@@ -109,21 +113,21 @@ Filter or search your bills, then click a row to open it. You will see the origi
 
 ### What gets validated
 
-| Check | Level |
-|---|---|
-| Vendor name missing, or identical to buyer name | error |
-| GSTIN bad format or checksum mismatch | error |
-| IGST charged together with CGST/SGST | error |
-| Line items do not add up to taxable value | error |
-| Total does not match taxable value plus tax | error |
-| No line items extracted | error |
-| Buyer name, buyer GSTIN or vendor GSTIN missing | warning |
-| Date cannot be parsed, or invoice number missing | warning |
-| CGST and SGST differ | warning |
+| Check                                                                     | Level   |
+| ------------------------------------------------------------------------- | ------- |
+| Vendor name missing, or identical to buyer name                           | error   |
+| GSTIN bad format or checksum mismatch                                     | error   |
+| IGST charged together with CGST/SGST                                      | error   |
+| Line items do not add up to taxable value                                 | error   |
+| Total does not match taxable value plus tax                               | error   |
+| No line items extracted                                                   | error   |
+| Buyer name, buyer GSTIN or vendor GSTIN missing                           | warning |
+| Date cannot be parsed, or invoice number missing                          | warning |
+| CGST and SGST differ                                                      | warning |
 | State mismatch (same state with IGST, or different states with CGST/SGST) | warning |
-| Line amount differs from quantity × rate | warning |
-| Total slightly above taxable plus tax (possible freight or cess) | warning |
-| Fields the model marked as hard to read | warning |
+| Line amount differs from quantity × rate                                 | warning |
+| Total slightly above taxable plus tax (possible freight or cess)          | warning |
+| Fields the model marked as hard to read                                   | warning |
 
 Any error makes the status `review`. Warnings alone give `check`. No issues gives `ok`. The validator understands tax-inclusive line amounts, round-off, and dates written in many formats, including words such as "23rd July 2025".
 
@@ -133,14 +137,14 @@ Any error makes the status `review`. Warnings alone give `check`. No issues give
 
 All settings are optional environment variables, read from the environment or `.env`.
 
-| Variable | Default | Purpose |
-|---|---|---|
-| `BILLBOOK_BACKEND` | `ollama` | Default reading mode: `ollama` or `gemini` |
-| `BILLBOOK_MODEL` | `gemma4:12b` | Ollama model name |
-| `BILLBOOK_GEMINI_MODEL` | `gemma-4-26b-a4b-it` | Gemini model name |
-| `BILLBOOK_NUM_CTX` | `8192` | Ollama context window |
-| `BILLBOOK_MAX_SIDE` | `1600` / `2000` | Longest image side in pixels (local / cloud) |
-| `GEMINI_API_KEY` | none | Gemini key (`GOOGLE_API_KEY` also works) |
+| Variable                  | Default                | Purpose                                        |
+| ------------------------- | ---------------------- | ---------------------------------------------- |
+| `BILLBOOK_BACKEND`      | `ollama`             | Default reading mode: `ollama` or `gemini` |
+| `BILLBOOK_MODEL`        | `gemma4:12b`         | Ollama model name                              |
+| `BILLBOOK_GEMINI_MODEL` | `gemma-4-26b-a4b-it` | Gemini model name                              |
+| `BILLBOOK_NUM_CTX`      | `8192`               | Ollama context window                          |
+| `BILLBOOK_MAX_SIDE`     | `1600` / `2000`    | Longest image side in pixels (local / cloud)   |
+| `GEMINI_API_KEY`        | none                   | Gemini key (`GOOGLE_API_KEY` also works)     |
 
 ---
 
@@ -154,6 +158,7 @@ BillBook/
 ├── db.py           SQLite storage, search and training-data export
 ├── export.py       CSV export
 ├── requirements.txt Pinned dependencies
+├── LICENSE         Apache License 2.0
 ├── .env            Your settings (not committed)
 ├── billbook.db     Created on first run
 └── stored_bills/   Copies of uploaded bill images (created on first run)
@@ -193,4 +198,4 @@ SQLite, created automatically: `invoices` (header, totals, status, issues, raw m
 
 ## License
 
-Add your license here.
+Licensed under the [Apache License 2.0](LICENSE).
