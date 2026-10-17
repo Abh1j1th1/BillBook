@@ -1,0 +1,30 @@
+{
+  "vendor_name": "Coastal Electricals",
+  "vendor_gstin": "27KYMDK2145Y1ZS",
+  "buyer_name": "Anjuna Beach Shack",
+  "buyer_gstin": "30ZSKFB1608F1ZE",
+  "invoice_number": "INV/4404",
+  "invoice_date": "10/01/2026",
+  "line_items": [
+    {
+      "description": "Cable tie pack",
+      "hsn": "4820",
+      "quantity": 6.0,
+      "rate": 557.61,
+      "amount": 3345.66
+    },
+    {
+      "description": "Tile adhesive 20kg",
+      "hsn": "8539",
+      "quantity": 2.0,
+      "rate": 212.02,
+      "amount": 424.04
+    }
+  ],
+  "taxable_value": 3769.7,
+  "cgst": 0.0,
+  "sgst": 0.0,
+  "igst": 452.36,
+  "total": 4222.06,
+  "unclear_fields": []
+}

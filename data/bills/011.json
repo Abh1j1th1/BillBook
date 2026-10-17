@@ -1,0 +1,44 @@
+{
+  "vendor_name": "Ravi Agencies",
+  "vendor_gstin": "30BEGAJ3930K1ZL",
+  "buyer_name": "Goa Tech Solutions",
+  "buyer_gstin": "30JAKMN2502C1ZF",
+  "invoice_number": "INV/2457",
+  "invoice_date": "13/10/2026",
+  "line_items": [
+    {
+      "description": "Notebook A4",
+      "hsn": "8544",
+      "quantity": 2.0,
+      "rate": 756.55,
+      "amount": 1513.1
+    },
+    {
+      "description": "LED bulb 9W",
+      "hsn": "8539",
+      "quantity": 3.0,
+      "rate": 570.39,
+      "amount": 1711.17
+    },
+    {
+      "description": "Paint 4L white",
+      "hsn": "8544",
+      "quantity": 14.0,
+      "rate": 163.66,
+      "amount": 2291.24
+    },
+    {
+      "description": "Switch 6A",
+      "hsn": "8539",
+      "quantity": 13.0,
+      "rate": 786.07,
+      "amount": 10218.91
+    }
+  ],
+  "taxable_value": 15734.42,
+  "cgst": 944.07,
+  "sgst": 944.07,
+  "igst": 0.0,
+  "total": 17622.56,
+  "unclear_fields": []
+}

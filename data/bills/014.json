@@ -1,0 +1,37 @@
+{
+  "vendor_name": "Lakshmi Enterprises",
+  "vendor_gstin": "30ZKXYB0723V1ZJ",
+  "buyer_name": "Calangute Interiors",
+  "buyer_gstin": "30NXSFX4004Q1Z3",
+  "invoice_number": "INV/6742",
+  "invoice_date": "10/03/2026",
+  "line_items": [
+    {
+      "description": "Cable tie pack",
+      "hsn": "8544",
+      "quantity": 15.0,
+      "rate": 429.99,
+      "amount": 6449.85
+    },
+    {
+      "description": "Ball pen box",
+      "hsn": "8544",
+      "quantity": 18.0,
+      "rate": 195.34,
+      "amount": 3516.12
+    },
+    {
+      "description": "Switch 6A",
+      "hsn": "4820",
+      "quantity": 16.0,
+      "rate": 35.4,
+      "amount": 566.4
+    }
+  ],
+  "taxable_value": 10532.37,
+  "cgst": 263.31,
+  "sgst": 263.31,
+  "igst": 0.0,
+  "total": 11058.99,
+  "unclear_fields": []
+}

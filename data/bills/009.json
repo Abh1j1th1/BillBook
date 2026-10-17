@@ -1,0 +1,51 @@
+{
+  "vendor_name": "Ravi Agencies",
+  "vendor_gstin": "30NBZUZ1207J1ZN",
+  "buyer_name": "Goa Tech Solutions",
+  "buyer_gstin": "30VWSYK5543J1Z7",
+  "invoice_number": "INV/1042",
+  "invoice_date": "26/03/2026",
+  "line_items": [
+    {
+      "description": "Cable tie pack",
+      "hsn": "4820",
+      "quantity": 14.0,
+      "rate": 894.78,
+      "amount": 12526.92
+    },
+    {
+      "description": "LED bulb 9W",
+      "hsn": "8539",
+      "quantity": 11.0,
+      "rate": 390.72,
+      "amount": 4297.92
+    },
+    {
+      "description": "Notebook A4",
+      "hsn": "8539",
+      "quantity": 11.0,
+      "rate": 101.13,
+      "amount": 1112.43
+    },
+    {
+      "description": "PVC conduit 20mm",
+      "hsn": "4820",
+      "quantity": 1.0,
+      "rate": 317.42,
+      "amount": 317.42
+    },
+    {
+      "description": "Tile adhesive 20kg",
+      "hsn": "4820",
+      "quantity": 15.0,
+      "rate": 638.77,
+      "amount": 9581.55
+    }
+  ],
+  "taxable_value": 27836.24,
+  "cgst": 2505.26,
+  "sgst": 2505.26,
+  "igst": 0.0,
+  "total": 32846.76,
+  "unclear_fields": []
+}

@@ -1,0 +1,30 @@
+{
+  "vendor_name": "Mormugao Supplies",
+  "vendor_gstin": "27BKWBY7820X1Z3",
+  "buyer_name": "Mandovi Hospitality Pvt Ltd",
+  "buyer_gstin": "30RDZLH7740W1Z7",
+  "invoice_number": "INV/6654",
+  "invoice_date": "18/09/2026",
+  "line_items": [
+    {
+      "description": "Tile adhesive 20kg",
+      "hsn": "3917",
+      "quantity": 13.0,
+      "rate": 125.64,
+      "amount": 1633.32
+    },
+    {
+      "description": "Extension board",
+      "hsn": "8539",
+      "quantity": 1.0,
+      "rate": 813.38,
+      "amount": 813.38
+    }
+  ],
+  "taxable_value": 2446.7,
+  "cgst": 0.0,
+  "sgst": 0.0,
+  "igst": 440.41,
+  "total": 2887.11,
+  "unclear_fields": []
+}

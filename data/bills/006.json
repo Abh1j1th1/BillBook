@@ -1,0 +1,37 @@
+{
+  "vendor_name": "Coastal Electricals",
+  "vendor_gstin": "30MEUHV9349Z1ZV",
+  "buyer_name": "Goa Tech Solutions",
+  "buyer_gstin": "30EDDXV1896M1ZJ",
+  "invoice_number": "INV/2654",
+  "invoice_date": "18/09/2026",
+  "line_items": [
+    {
+      "description": "Cable tie pack",
+      "hsn": "3214",
+      "quantity": 7.0,
+      "rate": 444.73,
+      "amount": 3113.11
+    },
+    {
+      "description": "Notebook A4",
+      "hsn": "8539",
+      "quantity": 1.0,
+      "rate": 441.94,
+      "amount": 441.94
+    },
+    {
+      "description": "Tile adhesive 20kg",
+      "hsn": "8544",
+      "quantity": 3.0,
+      "rate": 754.49,
+      "amount": 2263.47
+    }
+  ],
+  "taxable_value": 5818.52,
+  "cgst": 814.59,
+  "sgst": 814.59,
+  "igst": 0.0,
+  "total": 7447.7,
+  "unclear_fields": []
+}

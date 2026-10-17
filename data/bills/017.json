@@ -1,0 +1,51 @@
+{
+  "vendor_name": "Sai Traders",
+  "vendor_gstin": "30BYYNM4721X1ZF",
+  "buyer_name": "Sunrise Builders",
+  "buyer_gstin": "30YTRUL5072B1ZZ",
+  "invoice_number": "INV/5077",
+  "invoice_date": "05/05/2026",
+  "line_items": [
+    {
+      "description": "Ball pen box",
+      "hsn": "3917",
+      "quantity": 17.0,
+      "rate": 574.07,
+      "amount": 9759.19
+    },
+    {
+      "description": "Tile adhesive 20kg",
+      "hsn": "3917",
+      "quantity": 3.0,
+      "rate": 258.5,
+      "amount": 775.5
+    },
+    {
+      "description": "LED bulb 9W",
+      "hsn": "4820",
+      "quantity": 13.0,
+      "rate": 371.79,
+      "amount": 4833.27
+    },
+    {
+      "description": "Switch 6A",
+      "hsn": "8544",
+      "quantity": 14.0,
+      "rate": 859.47,
+      "amount": 12032.58
+    },
+    {
+      "description": "Extension board",
+      "hsn": "4820",
+      "quantity": 5.0,
+      "rate": 48.37,
+      "amount": 241.85
+    }
+  ],
+  "taxable_value": 27642.39,
+  "cgst": 3869.93,
+  "sgst": 3869.93,
+  "igst": 0.0,
+  "total": 35382.25,
+  "unclear_fields": []
+}

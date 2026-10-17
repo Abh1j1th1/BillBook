@@ -1,0 +1,37 @@
+{
+  "vendor_name": "Sai Traders",
+  "vendor_gstin": "30XJLQX4955S1ZH",
+  "buyer_name": "Panjim Medicals",
+  "buyer_gstin": "30ALEAV1475L1ZR",
+  "invoice_number": "INV/8592",
+  "invoice_date": "17/09/2026",
+  "line_items": [
+    {
+      "description": "Paint 4L white",
+      "hsn": "8539",
+      "quantity": 1.0,
+      "rate": 241.61,
+      "amount": 241.61
+    },
+    {
+      "description": "Notebook A4",
+      "hsn": "3214",
+      "quantity": 17.0,
+      "rate": 231.67,
+      "amount": 3938.39
+    },
+    {
+      "description": "Switch 6A",
+      "hsn": "4820",
+      "quantity": 11.0,
+      "rate": 248.24,
+      "amount": 2730.64
+    }
+  ],
+  "taxable_value": 6910.64,
+  "cgst": 414.64,
+  "sgst": 414.64,
+  "igst": 0.0,
+  "total": 7739.92,
+  "unclear_fields": []
+}

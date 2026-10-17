@@ -1,0 +1,30 @@
+{
+  "vendor_name": "Ravi Agencies",
+  "vendor_gstin": "30NXJFN5667G1ZK",
+  "buyer_name": "Goa Tech Solutions",
+  "buyer_gstin": "30VTFNJ0022Y1Z3",
+  "invoice_number": "INV/5740",
+  "invoice_date": "15/06/2026",
+  "line_items": [
+    {
+      "description": "Notebook A4",
+      "hsn": "3214",
+      "quantity": 12.0,
+      "rate": 149.01,
+      "amount": 1788.12
+    },
+    {
+      "description": "Switch 6A",
+      "hsn": "8539",
+      "quantity": 1.0,
+      "rate": 687.17,
+      "amount": 687.17
+    }
+  ],
+  "taxable_value": 2475.29,
+  "cgst": 61.88,
+  "sgst": 61.88,
+  "igst": 0.0,
+  "total": 2599.05,
+  "unclear_fields": []
+}

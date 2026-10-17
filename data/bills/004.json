@@ -1,0 +1,37 @@
+{
+  "vendor_name": "Fatima Stationers",
+  "vendor_gstin": "27CQCPN9602N1ZC",
+  "buyer_name": "Goa Tech Solutions",
+  "buyer_gstin": "30RYQMC4943E1ZE",
+  "invoice_number": "INV/1774",
+  "invoice_date": "24/06/2026",
+  "line_items": [
+    {
+      "description": "Switch 6A",
+      "hsn": "4820",
+      "quantity": 18.0,
+      "rate": 365.29,
+      "amount": 6575.22
+    },
+    {
+      "description": "Copper wire 1.5mm",
+      "hsn": "4820",
+      "quantity": 13.0,
+      "rate": 111.11,
+      "amount": 1444.43
+    },
+    {
+      "description": "Cable tie pack",
+      "hsn": "3917",
+      "quantity": 2.0,
+      "rate": 187.74,
+      "amount": 375.48
+    }
+  ],
+  "taxable_value": 8395.13,
+  "cgst": 0.0,
+  "sgst": 0.0,
+  "igst": 2350.64,
+  "total": 10745.77,
+  "unclear_fields": []
+}

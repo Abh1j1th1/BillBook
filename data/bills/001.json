@@ -1,0 +1,37 @@
+{
+  "vendor_name": "Coastal Electricals",
+  "vendor_gstin": "27CLVCF6953H1Z7",
+  "buyer_name": "Sunrise Builders",
+  "buyer_gstin": "30PDLNP5615G1ZE",
+  "invoice_number": "INV/6201",
+  "invoice_date": "04/09/2026",
+  "line_items": [
+    {
+      "description": "Paint 4L white",
+      "hsn": "3214",
+      "quantity": 18.0,
+      "rate": 102.83,
+      "amount": 1850.94
+    },
+    {
+      "description": "Copper wire 1.5mm",
+      "hsn": "3917",
+      "quantity": 2.0,
+      "rate": 820.54,
+      "amount": 1641.08
+    },
+    {
+      "description": "PVC conduit 20mm",
+      "hsn": "4820",
+      "quantity": 2.0,
+      "rate": 95.63,
+      "amount": 191.26
+    }
+  ],
+  "taxable_value": 3683.28,
+  "cgst": 0.0,
+  "sgst": 0.0,
+  "igst": 184.16,
+  "total": 3867.44,
+  "unclear_fields": []
+}

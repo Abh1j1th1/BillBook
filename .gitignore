@@ -1,0 +1,22 @@
+# Secrets and local settings
+.env
+ 
+# User data (bills contain private financial information)
+stored_bills/
+billbook.db
+training_data.jsonl
+ 
+# Python
+.venv/
+__pycache__/
+*.pyc
+ 
+# Editor and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+ 
+# Gradio
+.gradio/
+flagged/

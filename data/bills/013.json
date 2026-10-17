@@ -1,0 +1,30 @@
+{
+  "vendor_name": "Mapusa Hardware",
+  "vendor_gstin": "30TMVWF7264N1ZL",
+  "buyer_name": "Sunrise Builders",
+  "buyer_gstin": "30MSUQR0127K1Z7",
+  "invoice_number": "INV/9402",
+  "invoice_date": "05/01/2026",
+  "line_items": [
+    {
+      "description": "Switch 6A",
+      "hsn": "4820",
+      "quantity": 16.0,
+      "rate": 252.14,
+      "amount": 4034.24
+    },
+    {
+      "description": "Notebook A4",
+      "hsn": "3214",
+      "quantity": 3.0,
+      "rate": 678.47,
+      "amount": 2035.41
+    }
+  ],
+  "taxable_value": 6069.65,
+  "cgst": 151.74,
+  "sgst": 151.74,
+  "igst": 0.0,
+  "total": 6373.13,
+  "unclear_fields": []
+}

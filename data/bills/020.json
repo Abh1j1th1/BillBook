@@ -1,0 +1,30 @@
+{
+  "vendor_name": "Mapusa Hardware",
+  "vendor_gstin": "29JYCZE3884B1ZR",
+  "buyer_name": "Calangute Interiors",
+  "buyer_gstin": "30MJYEJ8048N1ZS",
+  "invoice_number": "INV/766",
+  "invoice_date": "13/01/2026",
+  "line_items": [
+    {
+      "description": "Ball pen box",
+      "hsn": "4820",
+      "quantity": 12.0,
+      "rate": 886.78,
+      "amount": 10641.36
+    },
+    {
+      "description": "Paint 4L white",
+      "hsn": "8544",
+      "quantity": 6.0,
+      "rate": 115.88,
+      "amount": 695.28
+    }
+  ],
+  "taxable_value": 11336.64,
+  "cgst": 0.0,
+  "sgst": 0.0,
+  "igst": 2040.6,
+  "total": 13377.24,
+  "unclear_fields": []
+}

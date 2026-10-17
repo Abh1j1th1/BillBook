@@ -1,0 +1,51 @@
+{
+  "vendor_name": "Fatima Stationers",
+  "vendor_gstin": "29RBNVP4374T1ZK",
+  "buyer_name": "Goa Tech Solutions",
+  "buyer_gstin": "30FEPHJ8208N1ZJ",
+  "invoice_number": "INV/6881",
+  "invoice_date": "24/09/2026",
+  "line_items": [
+    {
+      "description": "Extension board",
+      "hsn": "4820",
+      "quantity": 18.0,
+      "rate": 132.03,
+      "amount": 2376.54
+    },
+    {
+      "description": "LED bulb 9W",
+      "hsn": "8539",
+      "quantity": 14.0,
+      "rate": 322.42,
+      "amount": 4513.88
+    },
+    {
+      "description": "Ball pen box",
+      "hsn": "8539",
+      "quantity": 9.0,
+      "rate": 670.35,
+      "amount": 6033.15
+    },
+    {
+      "description": "Notebook A4",
+      "hsn": "8539",
+      "quantity": 13.0,
+      "rate": 597.28,
+      "amount": 7764.64
+    },
+    {
+      "description": "Copper wire 1.5mm",
+      "hsn": "4820",
+      "quantity": 16.0,
+      "rate": 510.44,
+      "amount": 8167.04
+    }
+  ],
+  "taxable_value": 28855.25,
+  "cgst": 0.0,
+  "sgst": 0.0,
+  "igst": 1442.76,
+  "total": 30298.01,
+  "unclear_fields": []
+}

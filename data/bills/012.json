@@ -1,0 +1,30 @@
+{
+  "vendor_name": "Ravi Agencies",
+  "vendor_gstin": "30TRBWX6781S1ZZ",
+  "buyer_name": "Panjim Medicals",
+  "buyer_gstin": "30PVASV7960B1Z6",
+  "invoice_number": "INV/2280",
+  "invoice_date": "21/06/2026",
+  "line_items": [
+    {
+      "description": "Extension board",
+      "hsn": "3214",
+      "quantity": 5.0,
+      "rate": 598.64,
+      "amount": 2993.2
+    },
+    {
+      "description": "Switch 6A",
+      "hsn": "4820",
+      "quantity": 13.0,
+      "rate": 692.59,
+      "amount": 9003.67
+    }
+  ],
+  "taxable_value": 11996.87,
+  "cgst": 719.81,
+  "sgst": 719.81,
+  "igst": 0.0,
+  "total": 13436.49,
+  "unclear_fields": []
+}

@@ -1,0 +1,30 @@
+{
+  "vendor_name": "Lakshmi Enterprises",
+  "vendor_gstin": "30FUHYM1246V1ZK",
+  "buyer_name": "Goa Tech Solutions",
+  "buyer_gstin": "30YBAQK7147L1Z1",
+  "invoice_number": "INV/1954",
+  "invoice_date": "03/03/2026",
+  "line_items": [
+    {
+      "description": "Ball pen box",
+      "hsn": "3917",
+      "quantity": 3.0,
+      "rate": 200.59,
+      "amount": 601.77
+    },
+    {
+      "description": "Switch 6A",
+      "hsn": "3917",
+      "quantity": 10.0,
+      "rate": 693.95,
+      "amount": 6939.5
+    }
+  ],
+  "taxable_value": 7541.27,
+  "cgst": 452.48,
+  "sgst": 452.48,
+  "igst": 0.0,
+  "total": 8446.23,
+  "unclear_fields": []
+}

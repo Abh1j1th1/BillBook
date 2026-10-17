@@ -1,0 +1,30 @@
+{
+  "vendor_name": "Sai Traders",
+  "vendor_gstin": "30NZGHW2550P1Z3",
+  "buyer_name": "Calangute Interiors",
+  "buyer_gstin": "30RBEXR0243R1ZO",
+  "invoice_number": "INV/658",
+  "invoice_date": "23/06/2026",
+  "line_items": [
+    {
+      "description": "PVC conduit 20mm",
+      "hsn": "3917",
+      "quantity": 17.0,
+      "rate": 850.32,
+      "amount": 14455.44
+    },
+    {
+      "description": "Ball pen box",
+      "hsn": "3214",
+      "quantity": 13.0,
+      "rate": 249.58,
+      "amount": 3244.54
+    }
+  ],
+  "taxable_value": 17699.98,
+  "cgst": 442.5,
+  "sgst": 442.5,
+  "igst": 0.0,
+  "total": 18584.98,
+  "unclear_fields": []
+}

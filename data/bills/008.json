@@ -1,0 +1,37 @@
+{
+  "vendor_name": "Ravi Agencies",
+  "vendor_gstin": "30LNMYS8925G1ZW",
+  "buyer_name": "Anjuna Beach Shack",
+  "buyer_gstin": "30DCLBF0678E1ZQ",
+  "invoice_number": "INV/6099",
+  "invoice_date": "05/05/2026",
+  "line_items": [
+    {
+      "description": "Notebook A4",
+      "hsn": "3214",
+      "quantity": 4.0,
+      "rate": 466.79,
+      "amount": 1867.16
+    },
+    {
+      "description": "Ball pen box",
+      "hsn": "8544",
+      "quantity": 1.0,
+      "rate": 688.79,
+      "amount": 688.79
+    },
+    {
+      "description": "Copper wire 1.5mm",
+      "hsn": "3214",
+      "quantity": 15.0,
+      "rate": 306.54,
+      "amount": 4598.1
+    }
+  ],
+  "taxable_value": 7154.05,
+  "cgst": 429.24,
+  "sgst": 429.24,
+  "igst": 0.0,
+  "total": 8012.53,
+  "unclear_fields": []
+}

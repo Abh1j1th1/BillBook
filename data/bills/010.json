@@ -1,0 +1,44 @@
+{
+  "vendor_name": "Sai Traders",
+  "vendor_gstin": "30EYRNE4628J1ZD",
+  "buyer_name": "Sunrise Builders",
+  "buyer_gstin": "30ATPEM9184R1ZB",
+  "invoice_number": "INV/9044",
+  "invoice_date": "27/07/2026",
+  "line_items": [
+    {
+      "description": "PVC conduit 20mm",
+      "hsn": "8539",
+      "quantity": 4.0,
+      "rate": 419.32,
+      "amount": 1677.28
+    },
+    {
+      "description": "Notebook A4",
+      "hsn": "8539",
+      "quantity": 18.0,
+      "rate": 387.63,
+      "amount": 6977.34
+    },
+    {
+      "description": "Extension board",
+      "hsn": "3214",
+      "quantity": 20.0,
+      "rate": 133.72,
+      "amount": 2674.4
+    },
+    {
+      "description": "LED bulb 9W",
+      "hsn": "3917",
+      "quantity": 8.0,
+      "rate": 845.55,
+      "amount": 6764.4
+    }
+  ],
+  "taxable_value": 18093.42,
+  "cgst": 1628.41,
+  "sgst": 1628.41,
+  "igst": 0.0,
+  "total": 21350.24,
+  "unclear_fields": []
+}

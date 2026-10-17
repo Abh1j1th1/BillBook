@@ -1,0 +1,51 @@
+{
+  "vendor_name": "Anand Distributors",
+  "vendor_gstin": "30DJYLZ0578L1ZF",
+  "buyer_name": "Calangute Interiors",
+  "buyer_gstin": "30JMVBC2607K1ZQ",
+  "invoice_number": "INV/9569",
+  "invoice_date": "22/08/2026",
+  "line_items": [
+    {
+      "description": "Switch 6A",
+      "hsn": "3917",
+      "quantity": 15.0,
+      "rate": 338.19,
+      "amount": 5072.85
+    },
+    {
+      "description": "Paint 4L white",
+      "hsn": "3917",
+      "quantity": 6.0,
+      "rate": 635.12,
+      "amount": 3810.72
+    },
+    {
+      "description": "Tile adhesive 20kg",
+      "hsn": "3214",
+      "quantity": 3.0,
+      "rate": 525.49,
+      "amount": 1576.47
+    },
+    {
+      "description": "Notebook A4",
+      "hsn": "4820",
+      "quantity": 16.0,
+      "rate": 790.12,
+      "amount": 12641.92
+    },
+    {
+      "description": "Ball pen box",
+      "hsn": "8544",
+      "quantity": 10.0,
+      "rate": 555.88,
+      "amount": 5558.8
+    }
+  ],
+  "taxable_value": 28660.76,
+  "cgst": 716.52,
+  "sgst": 716.52,
+  "igst": 0.0,
+  "total": 30093.8,
+  "unclear_fields": []
+}
