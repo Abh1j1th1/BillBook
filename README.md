@@ -93,7 +93,135 @@ Filter or search your bills, then click a row to open it. You will see the origi
 ### 3. Export
 
 - **Filtered bills to CSV:** exports whatever the Browse tab is currently showing.
-- **Corrections as training data (JSONL):** exports every correction you have made.
+- **Corrections as training data (JSONL):** exports every correction you have made as an image-output-correction triplet for fine-tuning.
+
+---
+
+## Fine-tuning with exported corrections
+
+Every time you correct a bill in the **Browse** tab and hit **Save correction**, BillBook logs:
+- The stored image path (`image`)
+- The model's initial extraction attempt (`model_output`)
+- Your verified correction (`corrected`)
+
+Clicking **Export corrections as training data (JSONL)** in the **Export** tab outputs `training_data.jsonl`.
+
+### 1. Structure of `training_data.jsonl`
+
+```json
+{
+  "image": "stored_bills/20261017_184656_001.jpg",
+  "model_output": { "vendor_name": "ABC Retail", "total": 1200.0 },
+  "corrected": { "vendor_name": "ABC Retail Pvt Ltd", "total": 1250.0 }
+}
+```
+
+### 2. Format conversion for Vision LLMs
+
+Convert `training_data.jsonl` into standard conversational ShareGPT/ChatML format using this script (`prepare_dataset.py`):
+
+```python
+import json
+import extractor
+
+# Uses the exact extraction prompt from extractor.py
+PROMPT = extractor.HEADER_PROMPT
+
+dataset = []
+with open("training_data.jsonl", "r", encoding="utf-8") as f:
+    for line in f:
+        item = json.loads(line)
+        dataset.append({
+            "messages": [
+                {
+                    "role": "user",
+                    "content": [
+                        {"type": "image", "image": item["image"]},
+                        {"type": "text", "text": PROMPT}
+                    ]
+                },
+                {
+                    "role": "assistant",
+                    "content": [
+                        {"type": "text", "text": json.dumps(item["corrected"], ensure_ascii=False)}
+                    ]
+                }
+            ]
+        })
+
+with open("sft_dataset.json", "w", encoding="utf-8") as out:
+    json.dump(dataset, out, indent=2)
+
+print(f"Ready: {len(dataset)} examples exported to sft_dataset.json")
+```
+
+### 3. Fine-tuning with QLoRA (Unsloth / Hugging Face TRL)
+
+Fine-tune vision models (e.g., Gemma 4 Vision or Qwen2.5-VL) on a single GPU with 4-bit LoRA:
+
+```python
+from unsloth import FastVisionModel
+import torch
+from trl import SFTTrainer, SFTConfig
+
+# 1. Load 4-bit vision base model
+model, tokenizer = FastVisionModel.from_pretrained(
+    "google/gemma-4-vision-12b",
+    load_in_4bit=True,
+)
+
+# 2. Add LoRA adapters
+model = FastVisionModel.get_peft_model(
+    model,
+    r=16,
+    target_modules=["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"],
+    lora_alpha=16,
+    lora_dropout=0,
+)
+
+# 3. Train
+trainer = SFTTrainer(
+    model=model,
+    tokenizer=tokenizer,
+    train_dataset=dataset,
+    args=SFTConfig(
+        per_device_train_batch_size=2,
+        gradient_accumulation_steps=4,
+        warmup_steps=5,
+        max_steps=60,
+        learning_rate=2e-4,
+        fp16=not torch.cuda.is_bf16_supported(),
+        bf16=torch.cuda.is_bf16_supported(),
+        output_dir="outputs",
+    ),
+)
+trainer.train()
+
+# 4. Save merged model or adapter
+model.save_pretrained_merged("billbook_finetuned", tokenizer, save_method="merged_16bit")
+```
+
+### 4. Deploying your fine-tuned model back to BillBook
+
+#### For Local Mode (Ollama):
+1. Convert/quantize the weights to GGUF using `llama.cpp`.
+2. Create a `Modelfile`:
+   ```dockerfile
+   FROM ./billbook_finetuned.gguf
+   PARAMETER temperature 0.1
+   ```
+3. Register with Ollama:
+   ```bash
+   ollama create billbook-model -f Modelfile
+   ```
+4. Update your `.env`:
+   ```env
+   BILLBOOK_BACKEND=ollama
+   BILLBOOK_MODEL=billbook-model
+   ```
+
+#### For Cloud Mode (Gemini / Vertex AI):
+Upload the dataset to Google Cloud Vertex AI or Google AI Studio under **Supervised Tuning** to train a custom Gemini endpoint (e.g. `tunedModels/billbook-v1`), and set `BILLBOOK_GEMINI_MODEL=tunedModels/billbook-v1` in `.env`.
 
 ---
 
